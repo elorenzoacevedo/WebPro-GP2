@@ -1,0 +1,25 @@
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    height: 50%;
+}
+.start{
+    text-align: center;
+}
+body{
+    background-image: url("back.jpg");
+    background-size: cover;
+}
+button{
+    background-color: gold; 
+}
+
+#startbtn {
+    margin-top: 2em;
+    margin-left: 43em;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+}

@@ -1,5 +1,6 @@
 body {
     background-color:#422D7A;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
@@ -7,7 +8,6 @@ header {
     margin-right: auto;
     width: 800px;
     height: 80px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: 4px ridge black;
     text-align: center;
     background-color: #BEA8FB;
@@ -20,7 +20,7 @@ h1 {
 
 main {
     width: 900px;
-    height: 350px;
+    height: 400px;
     margin-left: auto;
     margin-right: 400px;
     margin-top: 30px;
@@ -37,6 +37,42 @@ main {
     margin-right: 20px;
     background-color: #6B4AC7;
     border: 4px ridge black;
+    padding-left: 15px;
+}
+
+.prize {
+    width: 100px;
+    height: 22px;
+    background-color: #574D73;
+    border: 1px ridge black;
+    color: azure;
+    padding-top: 2px;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
+
+.discarded {
+    width: 100px;
+    height: 22px;
+    background-color: darkred;
+    border: 1px ridge black;
+    color: azure;
+    padding-top: 2px;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    text-decoration: line-through;
+}
+
+#initial_selection {
+    width: 100px;
+    height: 100px;
+    background-color: goldenrod;
+    float: left;
+    text-align: center;
+    margin: 5px;
+    padding-top: 5px;
 }
 
 .option {
@@ -50,10 +86,60 @@ main {
 }
 
 .option p {
-    margin-top: 35px;
+    margin-top: 15px;
 }
 
 .option:hover {
     background-color: #BEA8FB;
+}
+
+.selected {
+    width: 100px;
+    height: 100px;
+    background-color: #422D7A;
+    float: left;
+    text-align: center;
+    margin: 5px;
+    padding-top: 5px;
+}
+
+input[type="submit"]{
+    visibility: hidden;
+}
+
+#submit_btn {
+    width: 150px;
+    height: 50px;
+    background-color: #422D7A;
+    color: azure;
+    margin-top: 5px;
+    padding-left: 25px;
+    padding-bottom: 5px;
+    font-size: 14pt;
+    margin-left: 43%;
+}
+
+#congrats {
+    position: fixed;
+    top: 10em;
+    left: 25em;
+    width: 500px;
+    height: 200px;
+    background-color: #BEA8FB;
+    border: 4px ridge black;
+    text-align: center;
+
+    animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+#congrats button {
     cursor: pointer;
+    border-radius: 12px;
+    margin-top: 10px;
+    height: 30px;
 }
