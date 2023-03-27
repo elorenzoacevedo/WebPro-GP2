@@ -23,3 +23,31 @@ button{
     height: 50px;
     cursor: pointer;
 }
+.start1{
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  th {
+    background-color: black;
+    font-weight: bold;
+    padding: 8px;
+    text-align: left;
+    border: 1px solid black;
+  }
+  
+  td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  #title{
+    text-align: center;
+  }
+
+ 
