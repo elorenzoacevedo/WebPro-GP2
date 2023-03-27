@@ -40,11 +40,9 @@
         <title>Deal | No Deal</title>
     </head>
     <body>
-        
         <header>
             <h1>Deal | No Deal</h1>
         </header>
-        
         <!--Prizes tab-->
         <div id="right_tab">
             <?php 
@@ -93,9 +91,25 @@
 
             <?php } endfor;?>
             <button id="submit_btn">SELECT<input type="submit" value=""></button>
-            </form>
+             </form>
         </main>
-        
+        <!--Banker makes an offer between the 4 rounds -->
+        <?php
+         if ($round == 6 || $round == 11 || $round == 16 || $round == 20):
+                $average = offer($prizes, $chosen, $discarded);
+                $offer = $average * (rand(75, 125) / 100);
+                $noDeal = isset($_GET['nodeal']) && $_GET['nodeal'] == 'true';
+        ?>
+        <div id="box" <?php if ($noDeal) echo 'style="display:none;"'; ?>>
+            <p>Banker is making you an offer! <p>
+            <p>Banker is offering you,<strong>$<?=round($offer,2)?></strong>.</p>
+            <p>Deal or no deal?</p>
+            <p>  
+                <a href="./deal.php?offer=<?=$offer?>"><button>Deal</button></a>
+            </p>
+            <p><a href="./game.php?nodeal=true"><button>No Deal</button></a></p>
+        </div>
+        <?php endif; ?>
         <!--End of Game-->
         <?php 
             if($round == 24):
@@ -105,7 +119,9 @@
                 <h2>Congratulations!</h2>
                 <p>You won <strong>$<?=$discarded[0]?></strong></p>
                 <a href="./game.php"><button>Play Again</button></a>
+                <a href="./leaderboard.php"><button>Leaderboard</button></a>
             </div>
         <?php endif; ?>
+ 
     </body>
 </html>
