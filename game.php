@@ -102,6 +102,7 @@
         ?>
         <div id="box" <?php if ($noDeal) echo 'style="display:none;"'; ?>>
             <p>Banker is making you an offer! <p>
+            <img src="banker.jpg" alt="dealornodeal" class="banker">  
             <p>Banker is offering you,<strong>$<?=round($offer,2)?></strong>.</p>
             <p>Deal or no deal?</p>
             <p>  
