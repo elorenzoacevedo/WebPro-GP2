@@ -3,7 +3,7 @@ $players = fopen("leaderboard.txt", "r");
 echo "<table>";
 echo "<tr id =title>Leaderboard</tr>";
 
-while(!feof($players)) {
+while (!feof($players)) {
     $line = fgets($players);
     $playerData = explode(",", $line);
 
@@ -17,9 +17,11 @@ echo "</table>";
 ?>
 
 <html>
+
 <head>
-<title>Leaderboard</title>
-<link rel="stylesheet" href="./style.css">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<a href="./login.php"><button id ="startbtn">Home</button></a>
+<a href="./login.php"><button id="startbtn">Home</button></a>
+
 </html>
