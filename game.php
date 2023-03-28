@@ -96,12 +96,12 @@
         <?php
          if ($round == 6 || $round == 11 || $round == 16 || $round == 20):
                 $average = offer($prizes, $chosen, $discarded);
-                $offer = $average * (rand(75, 125) / 100);
+                $offer = $average * $round / 10;
                 $noDeal = isset($_GET['nodeal']) && $_GET['nodeal'] == 'true';
         ?>
         <div id="box" <?php if ($noDeal) echo 'style="display:none;"'; ?>>
             <p>Banker is making you an offer! <p>
-            <img src="banker.jpg" alt="dealornodeal" class="banker">  
+            <img src="banker.jpg" alt="dealornodeal" id="banker">  
             <p>Banker is offering you,<strong>$<?=round($offer,2)?></strong>.</p>
             <p>Deal or no deal?</p>
             <p>  
