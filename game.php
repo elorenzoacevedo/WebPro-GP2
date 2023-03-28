@@ -98,7 +98,7 @@
                 $average = offer($prizes, $discarded);
                 print_r($average);
                 print_r($round);
-                $offer = $average * ($round / 100);
+                $offer = $average * ($round / 10);
                 $noDeal = isset($_GET['nodeal']) && $_GET['nodeal'] == 'true';
         ?>
         <div id="box" <?php if ($noDeal) echo 'style="display:none;"'; ?>>
