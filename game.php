@@ -25,6 +25,8 @@
         $_SESSION['discarded'][$_SESSION['disCount']] = $priceval[1];
         $_SESSION['disCount']++;
     }
+
+    //Initialize local variables
     if(!empty($_SESSION['chosen'])){
         $initialSelection = $_SESSION['chosen'][0];
     }
@@ -38,6 +40,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="./game.css">
+        <link rel="icon" type="image/x-icon" href="favicon.jpg">
         <title>Deal | No Deal</title>
     </head>
     <body>
@@ -50,6 +53,7 @@
                 $i = 0;
                 for($i = 0; $i < 24; $i++):
                     $prize = "prize";
+                    //Cross out prize if it has been discarded
                     if(!empty($discarded)){
                         if($prizes[$i] != $discarded[0] && in_array($prizes[$i], $discarded)){
                             $prize = "discarded";

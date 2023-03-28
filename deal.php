@@ -1,8 +1,10 @@
 <?php 
     session_start();
+    //Get offer & user
     $offer = $_GET['offer'];
     $offer = round($offer, 2);
     $user = $_SESSION['user'];
+    //Write contents in file
     $data = "{$user},{$offer}\n";
     file_put_contents("leaderboard.txt", $data, FILE_APPEND);
 ?>
@@ -10,6 +12,7 @@
 <head>
     <title>Congratulations!</title>
     <link rel="stylesheet" type="text/css" href="./game.css">
+    <link rel="icon" type="image/x-icon" href="favicon.jpg">
 </head>
 <body>
     <div id="box">

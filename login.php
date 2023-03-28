@@ -1,11 +1,13 @@
 <?php 
-session_start();
-session_destroy();
+    //Reset session
+    session_start();
+    session_destroy();
  ?>
 <html> 
 <head>
 <title>Login</title>
 <link rel="stylesheet" href="./style.css">
+<link rel="icon" type="image/x-icon" href="favicon.jpg">
 </head>
 <body>
 <img src="pic.jpg" alt="dealornodeal" class="center"> 
