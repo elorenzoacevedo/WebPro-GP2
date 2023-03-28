@@ -6,7 +6,6 @@
                 100, 1000000, 50, 500000, 10, 250000, 5, 100000, 2, 75000, 1, 50000, 0.1];
 
     $user = $_SESSION['user'];
-    var_dump($user);
     
     //Initialize session variables
     if(!isset($_SESSION['chosen'])){

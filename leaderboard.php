@@ -18,10 +18,19 @@ while (!feof($players)) {
         $count++;
     }
 }
-var_dump($leaderboard);
-echo "<br>";
 usort($leaderboard, "cmp");
-var_dump($leaderboard);
+
+echo "<table>";
+echo "<tr id =title>Leaderboard</tr>";
+
+foreach($leaderboard as $user){
+    echo "<tr>";
+        echo "<td>" . $user['user'] . "</td>";
+            echo "<td>" . $user['score'] . "</td>";
+    echo "</tr>";
+}
+
+echo "</table>";
 
 ?>
 
