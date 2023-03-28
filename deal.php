@@ -1,8 +1,8 @@
 <?php 
+    session_start();
     $offer = $_GET['offer'];
     $user = $_SESSION['user'];
-    var_dump($user);
-    $data = "\n{$user},{$offer}";
+    $data = "{$user},{$offer}\n";
     file_put_contents("leaderboard.txt", $data, FILE_APPEND);
 ?>
 <html>
