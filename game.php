@@ -98,8 +98,6 @@
         <?php
          if ($round == 6 || $round == 12 || $round == 18 || $round == 23):
                 $average = offer($prizes, $discarded);
-                print_r($average);
-                print_r($round);
                 $offer = $average * ($round / 10);
                 $noDeal = isset($_GET['nodeal']) && $_GET['nodeal'] == 'true';
         ?>
@@ -117,7 +115,7 @@
         <!--End of Game-->
         <?php 
             if($round == 24):
-                $data = "\n{$user},{$discarded[0]}";
+                $data = "{$user},{$discarded[0]}\n";
                 file_put_contents("leaderboard.txt", $data, FILE_APPEND);
                 session_destroy();
         ?>
