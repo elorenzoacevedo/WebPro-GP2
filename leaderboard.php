@@ -20,7 +20,7 @@ while (!feof($players)) {
 }
 var_dump($leaderboard);
 echo "<br>";
-uasort($leaderboard, "cmp");
+usort($leaderboard, "cmp");
 var_dump($leaderboard);
 
 ?>
