@@ -14,13 +14,12 @@ while (!feof($players)) {
         $playerData = explode(",", $line);
         $playerData[1] = trim($playerData[1]);
         $playerData[1] = trim($playerData[1], "$");
-        var_dump($playerData);
-        print("\n");
         $leaderboard[$count] = ["user" => $playerData[0], "score" => floatval($playerData[1])];
         $count++;
     }
 }
 var_dump($leaderboard);
+echo "<br>";
 uasort($leaderboard, "cmp");
 var_dump($leaderboard);
 
