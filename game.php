@@ -96,6 +96,8 @@
         <?php
          if ($round == 6 || $round == 12 || $round == 18 || $round == 23):
                 $average = offer($prizes, $discarded);
+                print_r($average);
+                print_r($round);
                 $offer = $average * ($round / 100);
                 $noDeal = isset($_GET['nodeal']) && $_GET['nodeal'] == 'true';
         ?>
