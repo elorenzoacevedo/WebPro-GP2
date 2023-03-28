@@ -94,7 +94,7 @@
         </main>
         <!--Banker makes an offer between the 4 rounds -->
         <?php
-         if ($round == 6 || $round == 11 || $round == 16 || $round == 20):
+         if ($round == 6 || $round == 12 || $round == 18 || $round == 23):
                 $average = offer($prizes, $chosen, $discarded);
                 $offer = $average * $round / 10;
                 $noDeal = isset($_GET['nodeal']) && $_GET['nodeal'] == 'true';
