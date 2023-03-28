@@ -1,21 +1,24 @@
 <?php
+function cmp($a, $b){
+    return $b["score"] - $a["score"];
+}
+
 $players = fopen("leaderboard.txt", "r");
-echo "<table>";
-echo "<tr id =title>Leaderboard</tr>";
+$count = 0;
+$leaderboard = array();
+
 
 while (!feof($players)) {
     $line = fgets($players);
         if($line != ""){
         $playerData = explode(",", $line);
-
-        echo "<tr>";
-        echo "<td>" . $playerData[0] . "</td>";
-        echo "<td>" . $playerData[1] . "</td>";
-        echo "</tr>";
+        $leaderboard[count] = ["user" => $playerData[0], "score" => floatval($playerData[1])];
     }
 }
+var_dump($leaderboard);
+usort($leaderboard, "cmp");
+var_dump($leaderboard);
 
-echo "</table>";
 ?>
 
 <html>
