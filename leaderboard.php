@@ -12,7 +12,8 @@ while (!feof($players)) {
     $line = fgets($players);
         if($line != ""){
         $playerData = explode(",", $line);
-        $leaderboard[count] = ["user" => $playerData[0], "score" => floatval($playerData[1])];
+        $leaderboard[$count] = ["user" => $playerData[0], "score" => floatval($playerData[1])];
+        $count++;
     }
 }
 var_dump($leaderboard);
