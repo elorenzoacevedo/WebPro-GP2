@@ -12,12 +12,13 @@ while (!feof($players)) {
     $line = fgets($players);
         if($line != ""){
         $playerData = explode(",", $line);
+        var_dump($playerData);
         $leaderboard[$count] = ["user" => $playerData[0], "score" => floatval($playerData[1])];
         $count++;
     }
 }
 var_dump($leaderboard);
-usort($leaderboard, "cmp");
+uasort($leaderboard, "cmp");
 var_dump($leaderboard);
 
 ?>
