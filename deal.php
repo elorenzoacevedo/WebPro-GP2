@@ -1,4 +1,9 @@
-<?php $offer = $_GET['offer']; ?>
+<?php 
+    $offer = $_GET['offer'];
+    $user = $_SESSION['user'];
+    $data = "\n{$user},{$offer}";
+    file_put_contents("leaderboard.txt", $data, FILE_APPEND);
+?>
 <html>
 <head>
     <title>Congratulations!</title>

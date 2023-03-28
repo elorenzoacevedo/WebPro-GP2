@@ -9,7 +9,7 @@ session_destroy();
 </head>
 <body>
 <img src="pic.jpg" alt="dealornodeal" class="center"> 
-<form action ="./index.php" method = "post" name ="submit">
+<form action ="./index.php" method = "get" name ="submit">
     <p class= "start">
         <label for = "name"> Name: </label>
         <input  name = "name" type = "text" size ="16">

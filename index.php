@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    $_SESSION['user'] = $_GET['name'];
+?>
 <html>
 <head>
     <Title> Deal or No Deal</Title>

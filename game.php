@@ -5,6 +5,8 @@
     $prizes = [10000000, 25000, 7500000, 10000, 5000000, 5000, 4000000, 2000, 3000000, 1000, 2000000,
                 100, 1000000, 50, 500000, 10, 250000, 5, 100000, 2, 75000, 1, 50000, 0.1];
 
+    $user = $_SESSION['user'];
+    
     //Initialize session variables
     if(!isset($_SESSION['chosen'])){
         $_SESSION['chosen'] = [];
@@ -115,6 +117,8 @@
         <!--End of Game-->
         <?php 
             if($round == 24):
+                $data = "\n{$user},{$discarded[0]}";
+                file_put_contents("leaderboard.txt", $data, FILE_APPEND);
                 session_destroy();
         ?>
             <div id="congrats">
