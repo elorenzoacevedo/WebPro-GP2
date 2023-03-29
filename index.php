@@ -14,7 +14,7 @@
     <section id ="section" class="center">
     <a href="./game.php"><button id="startbtn">START GAME</button></a>
     <p class="start">
-        <button type="button"><a href="">Leaderboard</a></button>  
+        <button type="button"><a href="leaderboard.php">Leaderboard</a></button>  
     </p>
     </section>    
     
